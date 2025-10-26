@@ -1,0 +1,626 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.811);
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  overflow-x: auto;
+  display: grid;
+  gap: 5px;
+  grid-template-rows: 50px 45px 350px 40px 500px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "header header header header header header header" "aside top-bar top-bar top-bar top-bar top-bar top-bar" "aside box1 box1 box2 box2 box3 box3" "aside mid-line mid-line mid-line mid-line mid-line mid-line" "aside short1 short2 short3 short4 short5 short6";
+}
+main header {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main header .left-bar {
+  position: absolute;
+  left: 15px;
+}
+main header .left-bar i {
+  font-size: 25px;
+  font-weight: 500;
+}
+main header .left-bar sup {
+  font-size: 15px;
+}
+main header .mid-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+main header .mid-bar button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50vw;
+  height: 5vh;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.138);
+}
+main header .mid-bar button h5 {
+  margin-left: 20px;
+  font-size: 15px;
+  font-weight: 5;
+  color: rgba(255, 255, 255, 0.833);
+}
+main header .mid-bar i {
+  font-size: 20px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.782);
+  margin: 10px;
+}
+main header .right-bar {
+  position: absolute;
+  right: 25px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+main header .right-bar button {
+  width: 5vw;
+  height: 4.5vh;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.138);
+}
+main header .right-bar button h6 {
+  font-size: 15px;
+  font-weight: 10;
+  color: rgba(255, 255, 255, 0.785);
+}
+main header .right-bar i {
+  font-size: 20px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.785);
+}
+main header .right-bar .profile {
+  width: 35px;
+  height: 35px;
+  background-color: wheat;
+  border-radius: 50px;
+}
+main header .right-bar .profile .logo img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .top-bar {
+  grid-area: top-bar;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  gap: 10px;
+}
+main .top-bar button {
+  height: auto;
+  width: auto;
+  background-color: rgba(0, 0, 0, 0.473);
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  border-radius: 10px;
+  font-weight: 700;
+  padding: 9px 15px;
+}
+main .top-bar :nth-child(1) {
+  background-color: rgba(255, 255, 255, 0.875);
+  color: rgba(0, 0, 0, 0.866);
+}
+main aside {
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main aside button {
+  height: auto;
+  width: auto;
+  background-color: rgba(0, 0, 0, 0.233);
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 10px;
+  font-weight: 500;
+  padding: 10px;
+  margin: 5px;
+}
+main aside button i {
+  font-size: 20px;
+}
+main aside .underline {
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 900;
+  display: inline-flex;
+  gap: 10px;
+}
+main aside .underline i {
+  font-size: 20px;
+  font-weight: 500;
+}
+main aside .line {
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 900;
+  display: inline-flex;
+  gap: 5px;
+}
+main aside .line i {
+  font-size: 20px;
+  font-weight: 900;
+}
+main aside .profile {
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 20px;
+}
+main aside .profile .logo img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .box1 {
+  grid-area: box1;
+}
+main .box1 .card {
+  height: 250px;
+  width: auto;
+  margin: 5px;
+}
+main .box1 .card img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+main .box1 .card .bottom {
+  height: auto;
+  width: auto;
+  display: inline-flex;
+  justify-content: space-between;
+}
+main .box1 .card .bottom .logo {
+  position: relative;
+  left: 0;
+  height: 30px;
+  width: 30px;
+}
+main .box1 .card .bottom .logo img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .box1 .card .bottom .text {
+  font-size: 10px;
+  margin-left: 15px;
+  font-weight: 500;
+}
+main .box1 .card .bottom .text h5 {
+  color: rgba(255, 255, 255, 0.522);
+  margin-top: 5px;
+  font-size: 15px;
+}
+main .box1 .card .bottom .text h6 {
+  color: rgba(255, 255, 255, 0.522);
+  margin-top: 5px;
+  font-size: 15px;
+}
+main .box1 .card .bottom i {
+  position: relative;
+  right: 0;
+  font-weight: 500;
+  font-size: 20px;
+}
+main .box2 {
+  grid-area: box2;
+}
+main .box2 .card {
+  height: 250px;
+  width: auto;
+  margin: 5px;
+}
+main .box2 .card img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+main .box2 .card .bottom {
+  height: auto;
+  width: auto;
+  display: inline-flex;
+  justify-content: space-between;
+}
+main .box2 .card .bottom .logo {
+  position: relative;
+  left: 0;
+  height: 30px;
+  width: 30px;
+}
+main .box2 .card .bottom .logo img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .box2 .card .bottom .text {
+  font-size: 10px;
+  margin-left: 15px;
+  font-weight: 500;
+}
+main .box2 .card .bottom .text h5 {
+  color: rgba(255, 255, 255, 0.522);
+  margin-top: 5px;
+  font-size: 15px;
+}
+main .box2 .card .bottom .text h6 {
+  color: rgba(255, 255, 255, 0.522);
+  margin-top: 5px;
+  font-size: 15px;
+}
+main .box2 .card .bottom i {
+  position: relative;
+  right: 0;
+  font-weight: 500;
+  font-size: 20px;
+}
+main .box3 {
+  grid-area: box3;
+}
+main .box3 .card {
+  height: 250px;
+  width: auto;
+  margin: 5px;
+}
+main .box3 .card img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+main .box3 .card .bottom {
+  height: auto;
+  width: auto;
+  display: inline-flex;
+  justify-content: space-between;
+}
+main .box3 .card .bottom .logo {
+  position: relative;
+  left: 0;
+  height: 30px;
+  width: 30px;
+}
+main .box3 .card .bottom .logo img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .box3 .card .bottom .text {
+  font-size: 10px;
+  margin-left: 15px;
+  font-weight: 500;
+}
+main .box3 .card .bottom .text h5 {
+  color: rgba(255, 255, 255, 0.522);
+  margin-top: 5px;
+  font-size: 15px;
+}
+main .box3 .card .bottom .text h6 {
+  color: rgba(255, 255, 255, 0.522);
+  margin-top: 5px;
+  font-size: 15px;
+}
+main .box3 .card .bottom i {
+  position: relative;
+  right: 0;
+  font-weight: 500;
+  font-size: 20px;
+}
+main .mid-line {
+  grid-area: mid-line;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 25px;
+  padding-left: 10px;
+  font-weight: 800;
+}
+main .mid-line :nth-child(3) {
+  position: relative;
+  margin-left: 45.5em;
+}
+main .short1 {
+  grid-area: short1;
+}
+main .short1 .card2 {
+  height: 350px;
+  width: auto;
+  margin: 5px;
+}
+main .short1 .card2 img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+main .short1 .card2 .bottom2 {
+  height: auto;
+  width: auto;
+  display: inline-flex;
+  justify-content: space-between;
+}
+main .short1 .card2 .bottom2 .text {
+  font-size: 10px;
+  margin-left: 15px;
+  font-weight: 500;
+}
+main .short1 .card2 .bottom2 .text h5 {
+  color: rgba(255, 255, 255, 0.522);
+  margin-top: 5px;
+  font-size: 15px;
+}
+main .short1 .card2 .bottom2 .text h6 {
+  color: rgba(255, 255, 255, 0.522);
+  margin-top: 5px;
+  font-size: 15px;
+}
+main .short1 .card2 .bottom2 i {
+  position: relative;
+  right: 0;
+  font-weight: 500;
+  font-size: 20px;
+}
+main .short2 {
+  grid-area: short2;
+}
+main .short2 .card2 {
+  height: 350px;
+  width: auto;
+  margin: 5px;
+}
+main .short2 .card2 img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+main .short2 .card2 .bottom2 {
+  height: auto;
+  width: auto;
+  display: inline-flex;
+  justify-content: space-between;
+}
+main .short2 .card2 .bottom2 .text {
+  font-size: 10px;
+  margin-left: 15px;
+  font-weight: 500;
+}
+main .short2 .card2 .bottom2 .text h5 {
+  color: rgba(255, 255, 255, 0.522);
+  margin-top: 5px;
+  font-size: 15px;
+}
+main .short2 .card2 .bottom2 .text h6 {
+  color: rgba(255, 255, 255, 0.522);
+  margin-top: 5px;
+  font-size: 15px;
+}
+main .short2 .card2 .bottom2 i {
+  position: relative;
+  right: 0;
+  font-weight: 500;
+  font-size: 20px;
+}
+main .short3 {
+  grid-area: short3;
+}
+main .short3 .card2 {
+  height: 350px;
+  width: auto;
+  margin: 5px;
+}
+main .short3 .card2 img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+main .short3 .card2 .bottom2 {
+  height: auto;
+  width: auto;
+  display: inline-flex;
+  justify-content: space-between;
+}
+main .short3 .card2 .bottom2 .text {
+  font-size: 10px;
+  margin-left: 15px;
+  font-weight: 500;
+}
+main .short3 .card2 .bottom2 .text h5 {
+  color: rgba(255, 255, 255, 0.522);
+  margin-top: 5px;
+  font-size: 15px;
+}
+main .short3 .card2 .bottom2 .text h6 {
+  color: rgba(255, 255, 255, 0.522);
+  margin-top: 5px;
+  font-size: 15px;
+}
+main .short3 .card2 .bottom2 i {
+  position: relative;
+  right: 0;
+  font-weight: 500;
+  font-size: 20px;
+}
+main .short4 {
+  grid-area: short4;
+}
+main .short4 .card2 {
+  height: 350px;
+  width: auto;
+  margin: 5px;
+}
+main .short4 .card2 img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+main .short4 .card2 .bottom2 {
+  height: auto;
+  width: auto;
+  display: inline-flex;
+  justify-content: space-between;
+}
+main .short4 .card2 .bottom2 .text {
+  font-size: 10px;
+  margin-left: 15px;
+  font-weight: 500;
+}
+main .short4 .card2 .bottom2 .text h5 {
+  color: rgba(255, 255, 255, 0.522);
+  margin-top: 5px;
+  font-size: 15px;
+}
+main .short4 .card2 .bottom2 .text h6 {
+  color: rgba(255, 255, 255, 0.522);
+  margin-top: 5px;
+  font-size: 15px;
+}
+main .short4 .card2 .bottom2 i {
+  position: relative;
+  right: 0;
+  font-weight: 500;
+  font-size: 20px;
+}
+main .short5 {
+  grid-area: short5;
+}
+main .short5 .card2 {
+  height: 350px;
+  width: auto;
+  margin: 5px;
+}
+main .short5 .card2 img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+main .short5 .card2 .bottom2 {
+  height: auto;
+  width: auto;
+  display: inline-flex;
+  justify-content: space-between;
+}
+main .short5 .card2 .bottom2 .text {
+  font-size: 10px;
+  margin-left: 15px;
+  font-weight: 500;
+}
+main .short5 .card2 .bottom2 .text h5 {
+  color: rgba(255, 255, 255, 0.522);
+  margin-top: 5px;
+  font-size: 15px;
+}
+main .short5 .card2 .bottom2 .text h6 {
+  color: rgba(255, 255, 255, 0.522);
+  margin-top: 5px;
+  font-size: 15px;
+}
+main .short5 .card2 .bottom2 i {
+  position: relative;
+  right: 0;
+  font-weight: 500;
+  font-size: 20px;
+}
+main .short6 {
+  grid-area: short6;
+}
+main .short6 .card2 {
+  height: 350px;
+  width: auto;
+  margin: 5px;
+}
+main .short6 .card2 img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+main .short6 .card2 .bottom2 {
+  height: auto;
+  width: auto;
+  display: inline-flex;
+  justify-content: space-between;
+}
+main .short6 .card2 .bottom2 .text {
+  font-size: 10px;
+  margin-left: 15px;
+  font-weight: 500;
+}
+main .short6 .card2 .bottom2 .text h5 {
+  color: rgba(255, 255, 255, 0.522);
+  margin-top: 5px;
+  font-size: 15px;
+}
+main .short6 .card2 .bottom2 .text h6 {
+  color: rgba(255, 255, 255, 0.522);
+  margin-top: 5px;
+  font-size: 15px;
+}
+main .short6 .card2 .bottom2 i {
+  position: relative;
+  right: 0;
+  font-weight: 500;
+  font-size: 20px;
+}/*# sourceMappingURL=style.css.map */

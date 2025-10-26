@@ -94,7 +94,7 @@ main {
 
     .story {
         display: flex;
-        gap: 30px;
+        gap: 15px;
         overflow: auto;
         background-color: maroon;
         flex-wrap: nowrap;
@@ -114,7 +114,7 @@ main {
                     padding: 3px;
 
                     img {
-                        height: 90px;
+                        height: 80px;
                         width: 80px;
                         border-radius: 50%;
                         display: block;
